@@ -1,3 +1,15 @@
+/*-------------*/
+/* PROBLEM ONE */
+/*-------------*/
+// reference the elment "#remove-me" and add an eventlistener for the click event:
+// your code here:
+document.addEventListener('DOMContentLoaded', () => {
+ let p1 = document.getElementById('remove-me');
+    p1.addEventListener('click', () => {
+      problemOne(event);
+        // handle the click event
+        console.log('clicked');
+
 function problemOne(event) {
 
 
@@ -6,63 +18,110 @@ function problemOne(event) {
   console.log(event);
 
 }
-
-// reference the elment "#remove-me" and add an eventlistener for the click event:
-// your code here:
-let elementOne = document.querySelector('#remove-me')
-elementOne.addEventListner('click', problemOne);
-
+});
+});
+/*-------------*/
+/* PROBLEM TWO */
+/*-------------*/
+// reference the elment "#remove-my-children" and add an eventlistener for the click event:
+// your code here
+document.addEventListener('DOMContentLoaded', () => {
+ let p2 = document.getElementById('remove-my-children');
+    p2.addEventListener('click', () => {
+      problemTwo(event);
+        // handle the click event
+        console.log('clicked');
 
 
 function problemTwo(event) {
   const target = event.target;
-  // your code here:
-}
+  if (p2.hasChildNodes()){
+     target.remove(target);
+
+}}
+});
+});
 
 // reference the elment "#remove-my-children" and add an eventlistener for the click event:
 // your code here
 
-/* ---------------------------------------- */
-
-
-function problemThree(event) {
-
-  const target = event.target;
-  // your code here
-
-}
-
+/*-------------*/
+/*PROBLEM THREE*/
+/*-------------*/
 // reference the elment "#remove-my-children-then-me" and add an eventlistener for the click event:
 // your code here:
 
-/* ---------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+ let p3 = document.getElementById('remove-my-children-then-me');
+    p3.addEventListener('click', () => {
+      problemThree(event);
+        // handle the click event
+        console.log('clicked');
 
-function problemFour( event ) {
 
+function problemThree(event) {
   const target = event.target;
-  // your code here
-
+  target.parentNode.removeChild(target);
 }
 
+});
+});
+
+/*-------------*/
+/*PROBLEM FOUR */
+/*-------------*/
 // reference the elment "#add-children" and add an eventlistener for the click event:
 // your code here:
 
-/* ---------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+ let p4 = document.getElementById('add-children');
+    p4.addEventListener('click', () => {
+      problemFour(event);
+        // handle the click event
+        console.log('clicked');
 
-function problemFive({target}) {
 
+function problemFour(event) {
   const target = event.target;
-  // your code here
-
+  var objTo = document.getElementById('add-children')
+  var divtest = document.createElement("div")
+  target.classList.add('child')
+  divtest.innerHTML = "Click Me"
+  objTo.appendChild(divtest)
 }
 
+});
+});
+
+/*-------------*/
+/*PROBLEM FIVE */
+/*-------------*/
 // reference the elment "#to-the-back" and add an eventlistener for the mouseup event:
 // your code here:
 
-/* ---------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+ let p5 = document.getElementById('to-the-back');
+    p5.addEventListener('click', () => {
+      problemFive(event);
+        // handle the click event
+        console.log('clicked');
 
 
-function problemSix({target}) {
+function problemFive(event) {
+  const target = event.target;
+  var p5 = target.childNodes[0];
+  target.replaceChild(p5.childNodes[0]);
+}
+
+});
+});
+
+/*-------------*/
+/*PROBLEM SIX  */
+/*-------------*/
+
+
+/*function problemSix({target}) {
 
   const target = event.target;
   // your code here
@@ -76,7 +135,7 @@ function problemSix({target}) {
 
 /* Maybe code goes here, if some scope is needed... */
 
-function problemSeven(event) {
+/*function problemSeven(event) {
 
   const target = event.target;
   // your code here
@@ -90,7 +149,7 @@ function problemSeven(event) {
 /* ---------------------------------------- */
 
 
-function problemEight(event) {
+/*function problemEight(event) {
 
  const target = event.target;
   // your code here
@@ -104,8 +163,7 @@ function problemEight(event) {
 
 /* Maybe code goes here, if some scope is needed... */
 
-function problemNine(event) {
-
+/*
   event.preventDefault();
   const target = event.target;
   // your code here
@@ -117,7 +175,7 @@ function problemNine(event) {
 
 /* ---------------------------------------- */
 
-function problemTen(event) {
+/*function problemTen(event) {
   const target = event.target;
   // your code here
 }
@@ -128,7 +186,7 @@ function problemTen(event) {
 /* ---------------------------------------- */
 
 
-function problemEleven( event ) {
+/*function problemEleven( event ) {
 
   event.preventDefault();
 
@@ -140,10 +198,11 @@ function problemEleven( event ) {
 // your code here
 
 /* ---------------------------------------- */
-
+/*
 function problemTwelve ( ) {
 
     // your code here
 }
 
 // your code here
+*/
