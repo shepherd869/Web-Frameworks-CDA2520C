@@ -97,67 +97,124 @@ function problemFour(event) {
 /*PROBLEM FIVE */
 /*-------------*/
 // reference the elment "#to-the-back" and add an eventlistener for the mouseup event:
-// your code here:
 
-document.addEventListener('DOMContentLoaded', () => {
+//  >>>>> I Just couldn't get this one functioning <<<<<
+
+/*document.addEventListener('DOMContentLoaded', () => {
  let p5 = document.getElementById('to-the-back');
     p5.addEventListener('click', () => {
       problemFive(event);
         // handle the click event
         console.log('clicked');
 
-
-function problemFive(event) {
-  const target = event.target;
-  var p5 = target.childNodes[0];
-  target.replaceChild(p5.childNodes[0]);
-}
-
-});
-});
+        function problemFive(event){
+        var items = document.querySelectorAll("to-the-back");
+        items.forEach(function(item) {
+            item.onclick = function() { // add onClick event
+                var item_index = Array.prototype.indexOf.call(items, item);
+                // Add 1 to (index+1) until it reaches the clicked item
+                var plus = 1;
+                items.forEach(function(item,index) {
+                    if (index == item_index)
+                        plus = 0;
+                    item.style.order = index+1+plus;
+                });
+                // set the order of clicked item to 1
+                this.style.order = 1;
+              }
+            }
+        });
+})})
 
 /*-------------*/
 /*PROBLEM SIX  */
 /*-------------*/
-
-
-/*function problemSix({target}) {
-
-  const target = event.target;
-  // your code here
-
-}
-
 // reference the elment "#increment-child" and add an eventlistener for the click event:
 // your code here:
 
-/* ---------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+ let p6 = document.getElementById('increment-child');
+    p6.addEventListener('click', () => {
+      problemSix(event);
+        // handle the click event
+        console.log('clicked');
 
-/* Maybe code goes here, if some scope is needed... */
 
-/*function problemSeven(event) {
+function problemSix(event) {
+  const target = event.target;
+  var clicks = 0;
+  clicks += 1;
+  target.innerHTML = clicks;
+
+}
+});
+;
+});
+
+/*-------------*/
+/*PROBLEM SEVEN*/
+/*-------------*/
+// reference the elment "#increment-decrement" and add an eventlistener for the click event:
+
+
+document.addEventListener('DOMContentLoaded', () => {
+ let p7 = document.getElementById('increment-decrement');
+    p7.addEventListener('click', () => {
+      problemSeven(event);
+        // handle the click event
+        console.log('clicked');
+
+function problemSeven(event) {
 
   const target = event.target;
-  // your code here
+  var clicks = 0;
+  clicks += 1;
+  target.innerHTML = clicks;
+}})})
+
+document.addEventListener('click', () =>  {
+  if (event.shiftKey) {
+    problemSeven2(event);
+    return;
 
 
+
+      }})
+
+function problemSeven2(event) {
+  const target = event.target;
+  var clicks = 0;
+  clicks -= 1;
+  target.innerHTML = clicks;
 }
 
-// reference the elment "#increment-decrement" and add an eventlistener for the click event:
-// your code here:
-
-/* ---------------------------------------- */
-
-
-/*function problemEight(event) {
-
- const target = event.target;
-  // your code here
-
-}
-
+/*-------------*/
+/*PROBLEM EIGHT*/
+/*-------------*/
 // reference the elment "#echo-user-input" and add an eventlistener for the keyup event:
 // your code here:
+
+document.addEventListener('DOMContentLoaded', () => {
+ let p8 = document.getElementById('type-place');
+    p8.addEventListener('keyup', () => {
+      problemEight(event);
+        // handle the click event
+        console.log('keyup');
+
+
+function problemEight(event) {
+
+ const target = event.target;
+
+ var textbox8 = document.querySelector("user-input-copy");
+ var text8 = document.querySelector("type-place");
+ textbox8.innerHTML = text8;
+ }
+  // your code here
+
+})})
+
+
 
 /* ---------------------------------------- */
 
