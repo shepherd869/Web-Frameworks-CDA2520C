@@ -215,21 +215,30 @@ function problemEight(event) {
 })})
 
 
-
-/* ---------------------------------------- */
-
-/* Maybe code goes here, if some scope is needed... */
-
-/*
-  event.preventDefault();
-  const target = event.target;
-  // your code here
-
-}
-
-// reference the elment "#paste-place" and add an eventlistener for the paste event:
+/*-------------*/
+/*PROBLEM NINE*/
+/*-------------*/
+// reference the elment "#echo-user-input" and add an eventlistener for the keyup event:
 // your code here:
 
+/*document.addEventListener('DOMContentLoaded', () => {
+ let p9 = document.getElementById('paste-in-reverse');
+    p9.addEventListener('keyup', () => {
+      problemNine(event);
+        // handle the click event
+        console.log('keyup');
+
+
+function problemNine(event) {
+
+ const target = event.target.value;
+ arr[]= target;
+ arr.reverse(target);
+
+ }
+  // your code here
+
+})})
 /* ---------------------------------------- */
 
 /*function problemTen(event) {
