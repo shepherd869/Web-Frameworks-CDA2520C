@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+  <div data-role="header">
+    <h1>Web Frameworks - Course Project - Note Application</h1>
+  </div>
+  <div class="w3-container">
+      <div class="w3-dropdown-hover">
+        <button class="w3-button">Menu</button>
+        <div class="w3-dropdown-content w3-bar-block w3-border">
+          <a href="#" class="w3-bar-item w3-button">Notes</a>
+          <a href="#" class="w3-bar-item w3-button">Archive</a>
+          <a href="#" class="w3-bar-item w3-button">Trash</a>
+        </div>
+      </div>
+  </div><br>
+
+
+  <div data-role="main" class="ui-content">
+    <form method="post" action="/action_page_post.php">
+      <fieldset data-role="collapsible">
+        <legend>Take a Note!</legend>
+          <label for="name">Title</label>
+          <input type="text" name="text" id="name">
+          <p>Text:</p>
+          <input type="text" name="text2" id="name2">
+          <input type="submit" data-inline="true" value="Save">
+          <input type="submit" data-inline="true" value="Archive">
+          <input type="submit" data-inline="true" value="Delete">
+      </fieldset>
+    </form>
+  </div>
+
+  <div id="flex-container">
+    <h4>Your Notes</h4>
+      <button onclick="myFunction()">Placeholder Note</button>
+      <!-- An idea I had was to add functionality to expand the take a note box 
+      when a note is selected (if it's collapsed). This would be similiar to the
+      Google keep product.-->
+      <button onclick="myFunction()">Placeholder Note</button>
+  </div>
+
+  <div class="footer">
+    <p>Greg Shepherd (c) 2020 Web Frameworks</p>
+  </div>
+</div>
+</body>
+</html>

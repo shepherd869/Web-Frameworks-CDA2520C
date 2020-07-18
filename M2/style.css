@@ -1,0 +1,46 @@
+/* W3 CSS for drop down menu nav */
+.w3-dropdown-click,.w3-dropdown-hover{
+  position:relative;
+  display:inline-block;
+  cursor:pointer;
+}
+
+.w3-dropdown-hover:hover .w3-dropdown-content{
+  display:block;
+
+}
+
+.w3-container {
+  Color:light grey;
+  background-color: light grey;
+}
+
+.w3-dropdown-hover{
+  Color:light grey;
+  background-color: light grey;
+  vertical-align: sub;
+}
+
+.w3-dropdown-content{
+  cursor:auto;
+  color:#000;
+  background-color:light grey;
+  display:none;
+  position:absolute;
+  min-width:160px;
+  margin:0;
+  padding:0;
+  z-index:1;
+  vertical-align: sub;
+}
+
+body{
+  background-color:light grey;
+  padding: 0 18px;
+  overflow: hidden;
+}
+
+.flex-container{
+  float: left;
+  padding-left: 50px;
+}
